@@ -1,0 +1,14 @@
+{
+  "name": "test_task_1",
+  "version": "1.0.0",
+  "description": "Full stack app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton Melnikov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
