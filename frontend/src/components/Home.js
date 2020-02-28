@@ -43,6 +43,9 @@ class Home extends Component {
           current: true
         });
       })
+      .catch( (err) => {
+        console.log(err);
+      });
   }
 
   render(){
@@ -66,7 +69,6 @@ class Home extends Component {
             <TextField
               onChange={this.handleChange}
               value={this.state.member}
-              autoFocus={true}
               className="mb"
               size="medium"
               type="number"

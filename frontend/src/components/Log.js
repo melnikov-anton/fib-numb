@@ -18,8 +18,10 @@ class Log extends Component {
         this.setState({
           data: response.data
         });
-        console.log(response.data);
       })
+      .catch( (err) => {
+        console.log(err);
+      });
 
   }
 
