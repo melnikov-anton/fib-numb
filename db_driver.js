@@ -1,10 +1,11 @@
 let mysql = require('mysql');
 
 let dbConData = {
-  host     : 'localhost',
-  user     : 'fibonacci',
-  password : '011235',
-  database : 'fibonacci_db'
+  host     : process.env.FIB_DB_HOST,
+  port     : process.env.FIB_DB_PORT,
+  user     : process.env.FIB_DB_USER,
+  password : process.env.FIB_DB_PASSWORD,
+  database : process.env.FIB_DB_NAME
 }
 
 

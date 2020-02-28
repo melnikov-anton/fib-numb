@@ -1,5 +1,5 @@
 {
-  "name": "test_task_1",
+  "name": "Fibonacci numbers",
   "version": "1.0.0",
   "description": "Full stack app",
   "main": "app.js",
@@ -9,6 +9,11 @@
   "author": "Anton Melnikov",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
