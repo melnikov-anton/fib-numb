@@ -9,6 +9,7 @@ function getCookies() {
       name: itemArray[0],
       value: itemArray[1]
     });
+    return true;
   });
   return cookie;
 }
@@ -16,7 +17,8 @@ function getCookies() {
 function getCookieValue(name) {
   let value = null;
   getCookies().map( (item) => {
-    if (item.name == name) value = item.value;
+    if (item.name === name) value = item.value;
+    return true;
   });
   return value;
 }

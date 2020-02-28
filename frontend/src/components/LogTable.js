@@ -24,7 +24,9 @@ const LogTable = (props) => (
             <TableCell>{record.ip}</TableCell>
             <TableCell>{record.memb}</TableCell>
             <TableCell>{record.numb}</TableCell>
-            <TableCell>{record.ts}</TableCell>
+            <TableCell>
+              {record.ts.replace(/T|Z/g, ' ')}
+            </TableCell>
           </TableRow>
         ))}
 
