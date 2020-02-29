@@ -1,19 +1,19 @@
 
 function getFibMember(member) {
-  if (member == 0) {
+  if (member === 0) {
     return 0;
   }
-  let fibMemb = [];
-  for (let i = 0; i < member; i++) {
+  const fibMemb = [];
+  for (let i = 0; i < member; i += 1) {
     if (i === 0) {
       fibMemb[i] = 0;
     } else if (i === 1) {
       fibMemb[i] = 1;
     } else {
-      fibMemb[i] = fibMemb[i-2] + fibMemb[i-1];
+      fibMemb[i] = fibMemb[i - 2] + fibMemb[i - 1];
     }
   }
-  return fibMemb[member-1] === null ? 0 : fibMemb[member-1];
+  return fibMemb[member - 1] === null ? 0 : fibMemb[member - 1];
 }
 
 function getClientIP(rawIP) {
@@ -27,5 +27,5 @@ function getClientIP(rawIP) {
 
 module.exports = {
   getFibMember,
-  getClientIP
-}
+  getClientIP,
+};
