@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -29,12 +30,14 @@ const LogTable = (props) => (
             </TableCell>
           </TableRow>
         ))}
-
-
       </TableBody>
 
     </Table>
   </TableContainer>
 );
+
+LogTable.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired
+}
 
 export default LogTable;
