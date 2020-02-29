@@ -21,9 +21,10 @@ app.get('/log', function (req, res) {
   res.redirect('/');
 });
 
-app.get('/api/stat', function (req, res) {
+app.get('/api/stat/:days', function (req, res) {
+  const days = Number(req.params.days);
   let ipAddress = func.getClientIP(req.ip);
-  db.selectFromTable(ipAddress, (rec) => {
+  db.selectFromTable(ipAddress, days, (rec) => {
     res.json(rec.reverse());
   });
 });
