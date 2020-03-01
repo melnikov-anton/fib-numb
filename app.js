@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const func = require('./functions');
-const db = require('./db_driver');
+const func = require('./src/functions');
+const db = require('./src/db_driver');
 
 const app = express();
 
