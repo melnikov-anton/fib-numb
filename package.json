@@ -1,10 +1,10 @@
 {
   "name": "Fibonacci_numbers",
   "version": "1.0.0",
-  "description": "Full stack app",
+  "description": "Full stack JavaScript app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "doc": "jsdoc -c jsdoc.json"
   },
   "author": "Anton Melnikov",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "jsdoc": "^3.6.3",
     "nodemon": "^2.0.2"
   }
 }
