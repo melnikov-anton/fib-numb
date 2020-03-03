@@ -1,3 +1,7 @@
+/**
+ * @file app.js - main application
+ * @author Anton Melnikov
+ */
 require('dotenv').config();
 const express = require('express');
 const path = require('path');

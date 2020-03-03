@@ -1,5 +1,17 @@
+/**
+ *DB Driver module
+ * @module DB Driver
+ * @author Anton Melnikov
+ */
+
+/**
+ *
+ */
 const mysql = require('mysql');
 
+/**
+ * MySQL config object
+ */
 const dbConData = {
   host: process.env.FIB_DB_HOST,
   port: process.env.FIB_DB_PORT,
@@ -8,6 +20,11 @@ const dbConData = {
   database: process.env.FIB_DB_NAME,
 };
 
+/**
+ * connectToDb - Establishes connection to MySQL server
+ *
+ * @returns {object}  - Connection object
+ */
 function connectToDb() {
   const connection = mysql.createConnection(dbConData);
   connection.connect((err) => {
@@ -20,6 +37,11 @@ function connectToDb() {
   return connection;
 }
 
+/**
+ * initTable - Create table in DB if not exists
+ *
+ * @returns {void}
+ */
 function initTable() {
   const connection = connectToDb();
 
@@ -34,6 +56,14 @@ function initTable() {
 }
 
 
+/**
+ * insertIntoTable - Writes record into table (log)
+ *
+ * @param  {string} ip   - IP address
+ * @param  {number} memb - member of Fibonacci sequence
+ * @param  {number} numb - Fibonacci number
+ *
+ */
 function insertIntoTable(ip, memb, numb) {
   const connection = connectToDb();
 
@@ -49,6 +79,14 @@ function insertIntoTable(ip, memb, numb) {
 }
 
 
+/**
+ * selectFromTable - Retrieves logs from DB
+ *
+ * @param  {string} ip       - IP address
+ * @param  {number} days     - amount of days
+ * @param  {function} callback - callback function to get results
+ * @returns {array}          - Array of records for requested IP
+ */
 function selectFromTable(ip, days, callback) {
   const connection = connectToDb();
 
