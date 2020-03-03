@@ -49,5 +49,6 @@ app.get('*', (req, res) => {
 
 
 app.listen(PORT, () => {
+  db.initTable();
   console.log(`Fibonacci numbers app listening on port ${PORT}!`);
 });

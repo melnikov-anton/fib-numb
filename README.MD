@@ -1,6 +1,6 @@
 # Fibonacci Numbers
-This is an example full stack application.
-It consists of two parts: backend and frontend.
+This is an example full stack application. User can request a member of Fibonacci sequence and get response. Each request is stored in database.  
+The application consists of two parts: backend and frontend.
 - Server-side application built with ExpressJS.
 - Client-side application built with React.
 
