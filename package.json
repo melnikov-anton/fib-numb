@@ -21,7 +21,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "jsdoc": "^3.6.3",
+    "jsdoc": "^3.6.11",
     "nodemon": "^2.0.4"
   }
 }
